@@ -1,9 +1,9 @@
 pluginManagement {
     includeBuild("build-logic")
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
-        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CloneDroidNight2023"
 include(":app")
- 
+include(":core:data")
