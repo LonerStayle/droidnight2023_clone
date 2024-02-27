@@ -1,19 +1,20 @@
+
 plugins {
-//    id("loner.android.library")
-//    id("loner.android.hilt")
-//    id("kotlinx-serialization")
+    id("loner.android.library")
+    id("loner.android.hilt")
+    id("kotlinx-serialization")
+
 }
 
-//android {
-//    namespace = "kr.loner.core.data"
-//}
+android {
+    namespace = "kr.loner.core.data"
+}
 
 dependencies {
-
-//    implementation(libs.androidx.core.ktx)
-//    implementation(libs.androidx.appcompat)
-//    implementation(libs.material)
-//    testImplementation(libs.junit4)
-//    androidTestImplementation(libs.junit)
-//    androidTestImplementation(libs.androidx.test.espresso.core)
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.okhttp.logging)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.kotlinx.datetime)
+    testImplementation(libs.turbine)
 }

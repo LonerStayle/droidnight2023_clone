@@ -16,4 +16,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "CloneDroidNight2023"
 include(":app")
+include(":core")
 include(":core:data")

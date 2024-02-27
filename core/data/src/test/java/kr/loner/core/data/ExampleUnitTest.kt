@@ -1,4 +1,4 @@
-package kr.loner.data
+package kr.loner.core.data
 
 import org.junit.Test
 
