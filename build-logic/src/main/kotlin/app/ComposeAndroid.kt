@@ -1,7 +1,5 @@
-package com.droidknights.app2023
+package app
 
-import app.androidExtension
-import app.libs
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
