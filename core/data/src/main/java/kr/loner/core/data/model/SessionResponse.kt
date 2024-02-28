@@ -5,14 +5,14 @@ import kotlinx.serialization.Serializable
 
 
 @Serializable
-data class SessionResponse(
+internal data class SessionResponse(
     val id:String,
     val title:String,
     val content:String,
     val speakers:List<SpeakerResponse>,
-    val level:String,
+    val level:LevelResponse,
     val tags:List<String>,
-    val room:RoomResponse?,
+    val room:RoomResponse = RoomResponse.ETC,
     val startTime:LocalDateTime,
     val endTime:LocalDateTime,
 )

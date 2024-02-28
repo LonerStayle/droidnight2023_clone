@@ -4,10 +4,10 @@ import kr.loner.core.data.model.SessionResponse
 import kr.loner.core.data.model.SponsorResponse
 import retrofit2.http.GET
 
-internal interface GitRawApi {
+internal interface GithubRawApi {
     @GET("/LonerStayle/droidnight2023_clone/main/core/data/src/main/assets/sponsors_mock.json")
-    suspend fun getSponsors(): List<SponsorResponse>
+    suspend fun getSponsorList(): List<SponsorResponse>
 
     @GET("/LonerStayle/droidnight2023_clone/main/core/data/src/main/assets/sessions_mock.json")
-    suspend fun getSessions(): List<SessionResponse>
+    suspend fun getSessionList(): List<SessionResponse>
 }

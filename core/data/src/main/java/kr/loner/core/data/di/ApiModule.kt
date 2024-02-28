@@ -24,7 +24,10 @@ internal object ApiModule {
     @Provides
     @Singleton
     fun provideConverterFactory(): Converter.Factory {
-        val json = Json { ignoreUnknownKeys = true }
+        val json = Json {
+            ignoreUnknownKeys = true
+            coerceInputValues = true
+        }
         return json.asConverterFactory("application/json".toMediaType())
     }
 
