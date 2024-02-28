@@ -37,9 +37,9 @@ internal class DefaultSessionRepository @Inject constructor(
         val currentBookmarkedSessionIds = bookmarkIds.first()
         sessionDataSource.updateBookmarkedSession(
             if (bookmark) {
-                currentBookmarkedSessionIds + sessionId
+                currentBookmarkedSessionIds.plus(sessionId)
             } else {
-                currentBookmarkedSessionIds - sessionId
+                currentBookmarkedSessionIds.minus(sessionId)
             }
         )
     }

@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Named
 
-internal class DefaultSessionPreferencesDataSource @Inject constructor(
+class DefaultSessionPreferencesDataSource @Inject constructor(
     @Named("session") private val dataStore: DataStore<Preferences>,
 ) : SessionPreferencesDataSource {
     object PrefKey {

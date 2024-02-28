@@ -1,6 +1,6 @@
 package kr.loner.core.model
 
-class Sponsor (
+data class Sponsor (
     val name:String,
     val imageUrl:String,
     val homepage:String,

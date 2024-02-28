@@ -1,4 +1,4 @@
-package kr.loner.core.data.api.fake
+package kr.loner.core.data.fake.api
 
 import kr.loner.core.data.api.GithubApi
 import kr.loner.core.data.model.ContributorResponse

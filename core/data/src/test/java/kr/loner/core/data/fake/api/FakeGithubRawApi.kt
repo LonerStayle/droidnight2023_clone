@@ -1,5 +1,6 @@
-package kr.loner.core.data.api.fake
+package kr.loner.core.data.fake.api
 
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream
 import kr.loner.core.data.api.GithubRawApi
@@ -7,6 +8,7 @@ import kr.loner.core.data.model.SessionResponse
 import kr.loner.core.data.model.SponsorResponse
 import java.io.File
 
+@OptIn(ExperimentalSerializationApi::class)
 internal class FakeGithubRawApi(
     private val json:Json = Json{
         ignoreUnknownKeys = true
