@@ -1,4 +1,4 @@
-package kr.loner.clonedroidnight2023
+package kr.loner.feature.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,6 +10,5 @@ class MainActivity : ComponentActivity() {
         setContent {
 
         }
-
     }
 }
