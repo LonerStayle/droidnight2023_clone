@@ -1,3 +1,4 @@
+
 package kr.loner.core.data.di
 
 import android.content.Context
@@ -27,33 +28,32 @@ internal abstract class DataModule {
     @Binds
     abstract fun bindContributorRepository(
         repository: DefaultContributorRepository
-    ):ContributorRepository
+    ): ContributorRepository
 
     @Binds
     abstract fun bindSettingsRepository(
         repository: DefaultSettingsRepository
-    ):SettingsRepository
+    ): SettingsRepository
 
     @Binds
     abstract fun bindSessionLocalDataSource(
-        dataSource:DefaultSessionPreferencesDataSource
-    ):SessionPreferencesDataSource
+        dataSource: DefaultSessionPreferencesDataSource
+    ): SessionPreferencesDataSource
 
     @InstallIn(SingletonComponent::class)
     @Module
-    internal object FakeModule{
+    internal object FakeModule {
         @Provides
         @Singleton
         fun provideSponsorRepository(
             githubRawApi: GithubRawApi
-        ):SponsorRepository = DefaultSponsorRepository(githubRawApi)
+        ): SponsorRepository = DefaultSponsorRepository(githubRawApi)
 
         @Provides
         @Singleton
         fun provideSessionRepository(
-            githubRawApi: GithubRawApi,
-            sessionDataSource: SessionPreferencesDataSource
-        ):SessionRepository = DefaultSessionRepository(githubRawApi,sessionDataSource)
+            githubRawApi: GithubRawApi, sessionDataSource: SessionPreferencesDataSource
+        ): SessionRepository = DefaultSessionRepository(githubRawApi, sessionDataSource)
 
         @Provides
         @Singleton
