@@ -1,8 +1,9 @@
 import app.configureVerifyDetekt
+import io.gitlab.arturbosch.detekt.Detekt
 
 configureVerifyDetekt()
 
-tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
+tasks.withType<Detekt>().configureEach {
     // Target version of the generated JVM bytecode. It is used for type resolution.
     jvmTarget = JavaVersion.VERSION_17.majorVersion
 
