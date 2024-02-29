@@ -9,13 +9,13 @@ dependencies {
     implementation(libs.verify.detektPlugin)
 }
 
-gradlePlugin{
+gradlePlugin {
     plugins {
-        register("androidHilt"){
+        register("androidHilt") {
             id = "loner.android.hilt"
             implementationClass = "app.HiltAndroidPlugin"
         }
-        register("kotlinHilt"){
+        register("kotlinHilt") {
             id = "loner.kotlin.hilt"
             implementationClass = "app.HiltKotlinPlugin"
         }

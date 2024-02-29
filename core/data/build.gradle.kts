@@ -1,4 +1,3 @@
-
 plugins {
     id("loner.android.library")
     id("loner.android.hilt")

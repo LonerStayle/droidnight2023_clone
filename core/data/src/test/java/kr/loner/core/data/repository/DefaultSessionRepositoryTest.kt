@@ -55,10 +55,10 @@ internal class DefaultSessionRepositoryTest : StringSpec() {
             }
 
             repository.getBookmarkedSessionIds().test {
-               awaitItem() shouldBe setOf("1", "2","3")
+                awaitItem() shouldBe setOf("1", "2", "3")
 
                 repository.bookmarkSession(sessionId = "2", bookmark = false)
-                awaitItem() shouldBe setOf("1","3")
+                awaitItem() shouldBe setOf("1", "3")
 
                 repository.bookmarkSession(sessionId = "3", bookmark = false)
                 awaitItem() shouldBe setOf("1")

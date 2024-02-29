@@ -17,13 +17,14 @@ internal class AssetsGithubRawApi(
         coerceInputValues = true
     }
 
-):GithubRawApi {
+) : GithubRawApi {
     private val sponsors = context.assets.open("sponsors_mock.json")
     private val sessions = context.assets.open("sessions_mock.json")
     override suspend fun getSponsorList(): List<SponsorResponse> {
         return json.decodeFromStream(sponsors)
     }
+
     override suspend fun getSessionList(): List<SessionResponse> {
-         return json.decodeFromStream(sessions)
+        return json.decodeFromStream(sessions)
     }
 }

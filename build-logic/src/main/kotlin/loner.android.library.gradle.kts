@@ -1,7 +1,7 @@
-import app.configureKotlinAndroid
 import app.configureCoroutineAndroid
 import app.configureHiltAndroid
 import app.configureKotest
+import app.configureKotlinAndroid
 
 plugins {
     id("com.android.library")

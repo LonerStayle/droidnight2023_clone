@@ -1,7 +1,6 @@
 package app
 
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.dependencies
 
 internal fun Project.configureKotestAndroid() {
     configureKotest()

@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-enum class LevelResponse{
+enum class LevelResponse {
     @SerialName("기타")
     ETC,
 

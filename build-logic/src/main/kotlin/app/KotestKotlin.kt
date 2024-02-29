@@ -5,7 +5,7 @@ import org.gradle.api.tasks.testing.Test
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.withType
 
-internal fun Project.configureKotest(){
+internal fun Project.configureKotest() {
     configureJUnit()
     val libs = extensions.libs
     dependencies {
@@ -15,7 +15,7 @@ internal fun Project.configureKotest(){
 }
 
 
-internal fun Project.configureJUnit(){
+internal fun Project.configureJUnit() {
     tasks.withType<Test>().configureEach {
         useJUnitPlatform()
     }

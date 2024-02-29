@@ -22,7 +22,7 @@ class SettingsPreferencesDataSource @Inject constructor(
         )
     }
 
-    suspend fun updateIsDarkTheme(isDarkTheme:Boolean){
+    suspend fun updateIsDarkTheme(isDarkTheme: Boolean) {
         dataStore.edit { pref ->
             pref[PrefKey.IS_DARK_THEME] = isDarkTheme
         }

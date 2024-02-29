@@ -43,6 +43,7 @@ internal object ApiModule {
             .client(okHttpClient).build()
             .create()
     }
+
     @Provides
     @Singleton
     fun provideGitRawApi(

@@ -4,7 +4,7 @@ import kr.loner.core.model.Contributor
 
 interface ContributorRepository {
     suspend fun getContributors(
-        owner:String,
-        name:String
-    ):List<Contributor>
+        owner: String,
+        name: String
+    ): List<Contributor>
 }

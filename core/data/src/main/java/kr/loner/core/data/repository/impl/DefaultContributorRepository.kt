@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 internal class DefaultContributorRepository @Inject constructor(
     private val githubApi: GithubApi
-):ContributorRepository {
+) : ContributorRepository {
     override suspend fun getContributors(owner: String, name: String): List<Contributor> {
         return githubApi.getContributors(owner, name).map(ContributorResponse::toEntity)
     }

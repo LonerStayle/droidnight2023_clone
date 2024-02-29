@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-enum class RoomResponse{
+enum class RoomResponse {
     ETC,
 
     @SerialName("Track1")

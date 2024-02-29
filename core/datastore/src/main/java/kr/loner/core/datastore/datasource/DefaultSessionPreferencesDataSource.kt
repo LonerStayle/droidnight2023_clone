@@ -19,6 +19,7 @@ class DefaultSessionPreferencesDataSource @Inject constructor(
     override val bookmarkedSession: Flow<Set<String>> = dataStore.data.map { pref ->
         pref[PrefKey.BOOKMARKED_SESSION] ?: emptySet()
     }
+
     override suspend fun updateBookmarkedSession(bookmarkedSession: Set<String>) {
         dataStore.edit { pref ->
             pref[PrefKey.BOOKMARKED_SESSION] = bookmarkedSession

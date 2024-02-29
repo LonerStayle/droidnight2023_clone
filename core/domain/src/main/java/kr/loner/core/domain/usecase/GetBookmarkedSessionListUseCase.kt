@@ -11,11 +11,11 @@ class GetBookmarkedSessionListUseCase @Inject constructor(
     private val getSessionListUseCase: GetSessionListUseCase
 ) {
     suspend operator fun invoke(): Flow<List<Session>> {
-        return  flow {
+        return flow {
             emit(getSessionListUseCase())
-        }.combine(getBookmarkedSessionIdListUseCase()){ allSessions, bookmarkIds ->
+        }.combine(getBookmarkedSessionIdListUseCase()) { allSessions, bookmarkIds ->
             allSessions
-                .filter { session -> bookmarkIds.contains(session.id)}
+                .filter { session -> bookmarkIds.contains(session.id) }
                 .sortedBy { it.startTime }
         }
     }

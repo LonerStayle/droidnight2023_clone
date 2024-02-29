@@ -16,7 +16,7 @@ internal fun SessionResponse.toEntity() = Session(
     content = this.content,
     speakers = this.speakers.map(SpeakerResponse::toEntity),
     level = this.level.toEntity(),
-    tags = this.tags.map {Tag(it)},
+    tags = this.tags.map { Tag(it) },
     room = this.room.toEntity(),
     startTime = this.startTime,
     endTime = this.endTime,
@@ -25,7 +25,7 @@ internal fun SessionResponse.toEntity() = Session(
 
 internal fun SpeakerResponse.toEntity() = Speaker(name, introduction, imageUrl)
 
-internal fun LevelResponse.toEntity():Level = when (this) {
+internal fun LevelResponse.toEntity(): Level = when (this) {
     LevelResponse.ETC -> Level.ETC
     LevelResponse.BASIC -> Level.BASIC
     LevelResponse.INTERMEDIATE -> Level.INTERMEDIATE
@@ -33,7 +33,7 @@ internal fun LevelResponse.toEntity():Level = when (this) {
 }
 
 
-internal fun RoomResponse.toEntity():Room = when (this) {
+internal fun RoomResponse.toEntity(): Room = when (this) {
     RoomResponse.ETC -> Room.ETC
     RoomResponse.TRACK1 -> Room.TRACK1
     RoomResponse.TRACK2 -> Room.TRACK2

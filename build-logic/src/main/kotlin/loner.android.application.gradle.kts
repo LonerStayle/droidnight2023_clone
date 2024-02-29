@@ -2,7 +2,7 @@ import app.configureHiltAndroid
 import app.configureKotestAndroid
 import app.configureKotlinAndroid
 
-plugins{
+plugins {
     id("com.android.application")
 }
 
