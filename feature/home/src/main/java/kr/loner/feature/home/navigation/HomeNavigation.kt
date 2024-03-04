@@ -5,7 +5,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import kr.loner.feature.home.HomeScreen
+import kr.loner.feature.home.HomeRoute
 
 fun NavController.navigateHome(navOptions: NavOptions) {
     navigate(HomeRoute.route, navOptions)
@@ -18,7 +18,7 @@ fun NavGraphBuilder.homeNavGraph(
     onShowErrorSnackBar: (throwable: Throwable?) -> Unit
 ) {
     composable(route = HomeRoute.route) {
-        HomeScreen(padding, onSessionClick, onContributorClick, onShowErrorSnackBar)
+        HomeRoute(padding, onSessionClick, onContributorClick, onShowErrorSnackBar)
     }
 }
 
