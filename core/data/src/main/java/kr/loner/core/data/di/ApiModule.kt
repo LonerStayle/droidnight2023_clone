@@ -7,6 +7,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
 import kr.loner.core.data.api.GithubApi
+import kr.loner.core.data.api.GithubRawApi
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Converter
@@ -49,7 +50,7 @@ internal object ApiModule {
     fun provideGitRawApi(
         okHttpClient: OkHttpClient,
         converterFactory: Converter.Factory
-    ): GithubApi {
+    ): GithubRawApi {
         return Retrofit.Builder()
             .baseUrl("https://raw.githubusercontent.com/")
             .addConverterFactory(converterFactory)

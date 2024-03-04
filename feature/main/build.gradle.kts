@@ -8,6 +8,11 @@ android {
 
 dependencies {
     implementation(projects.widget)
+    implementation(projects.feature.home)
+    implementation(projects.feature.bookmark)
+    implementation(projects.feature.setting)
+    implementation(projects.feature.contributor)
+    implementation(projects.feature.session)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -51,7 +51,8 @@ internal abstract class DataModule {
         @Provides
         @Singleton
         fun provideSessionRepository(
-            githubRawApi: GithubRawApi, sessionDataSource: SessionPreferencesDataSource
+            githubRawApi: GithubRawApi,
+            sessionDataSource: SessionPreferencesDataSource
         ): SessionRepository = DefaultSessionRepository(githubRawApi, sessionDataSource)
 
         @Provides
