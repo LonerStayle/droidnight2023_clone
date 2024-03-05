@@ -12,6 +12,7 @@ import kr.loner.feature.bookmark.navigation.navigateBookmark
 import kr.loner.feature.contributor.navigation.navigateContributor
 import kr.loner.feature.home.navigation.HomeRoute
 import kr.loner.feature.home.navigation.navigateHome
+import kr.loner.feature.session.navigation.navigateSession
 import kr.loner.feature.session.navigation.navigateSessionDetail
 import kr.loner.feature.setting.navigation.navigateSetting
 
@@ -48,7 +49,7 @@ internal class MainNavigator(
     }
 
     fun navigateSession() {
-        navController.navigateContributor()
+        navController.navigateSession()
     }
 
     fun navigateSessionDetail(sessionId: String) {

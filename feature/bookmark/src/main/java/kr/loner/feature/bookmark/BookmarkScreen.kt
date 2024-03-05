@@ -1,5 +1,6 @@
 package kr.loner.feature.bookmark
 
+import android.util.Log
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -20,9 +21,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -35,6 +39,8 @@ import kr.loner.core.designsystem.theme.LonerTheme
 import kr.loner.core.designsystem.theme.PaleGray
 import kr.loner.core.designsystem.theme.Purple01
 import kr.loner.core.designsystem.theme.surfaceDim
+import kr.loner.core.domain.usecase.GetBookmarkedSessionIdListUseCase
+import kr.loner.core.domain.usecase.GetBookmarkedSessionListUseCase
 
 
 @Composable
@@ -43,6 +49,7 @@ internal fun BookmarkRoute(
     viewModel: BookmarkViewModel = hiltViewModel()
 ) {
     val bookmarkUiState by viewModel.bookmarkUiState.collectAsStateWithLifecycle()
+
     LaunchedEffect(true) {
         viewModel.errorFlow.collectLatest { onShowErrorSnackBar(it) }
     }
@@ -54,10 +61,10 @@ internal fun BookmarkRoute(
             .systemBarsPadding()
 
     ) {
+
         BookmarkContent(
             uiState = bookmarkUiState,
             onClickEditButton = { viewModel.clickEditButton() })
-
     }
 }
 

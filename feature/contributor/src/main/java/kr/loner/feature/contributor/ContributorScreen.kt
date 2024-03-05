@@ -170,11 +170,11 @@ private fun ContributorList(
             }
 
             is ContributorListUiState.ContributorList -> {
-                val contributors = uiState.contributorList
+                val contributorList = uiState.contributorList
 
-                items(contributors.size) { index ->
+                items(contributorList.size) { index ->
                     ContributorItem(
-                        contributor = contributors[index],
+                        contributor = contributorList[index],
                         modifier = Modifier.padding(horizontal = 8.dp),
                     )
                 }

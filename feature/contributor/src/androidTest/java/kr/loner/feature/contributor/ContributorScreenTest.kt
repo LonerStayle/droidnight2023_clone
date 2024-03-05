@@ -32,7 +32,7 @@ class ContributorScreenTest {
 
         //then
         composeTestRule
-            .onNodeWithText("Contributors")
+            .onNodeWithText("ContributorList")
             .assertDoesNotExist()
     }
 

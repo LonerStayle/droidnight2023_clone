@@ -22,18 +22,24 @@ fun NavGraphBuilder.sessionNavGraph(
     onSessionClick: (Session) -> Unit,
     onShowErrorSnackBar: (throwable: Throwable?) -> Unit
 ) {
-    composable(SessionRoute.route) { SessionScreen() }
+    composable(SessionRoute.route) {
+        SessionScreen(
+            onBackClick,
+            onSessionClick,
+            onShowErrorSnackBar
+        )
+    }
 
     composable(
         route = SessionRoute.detailRoute("{id}"),
         arguments = listOf(
-            navArgument("id"){
+            navArgument("id") {
                 type = NavType.StringType
             }
         )
-    ){ entry ->
-        val sessionId = entry.arguments?.getString("id")?:""
-        SessionDetailScreen()
+    ) { entry ->
+        val sessionId = entry.arguments?.getString("id") ?: ""
+        SessionDetailScreen(sessionId,onBackClick)
     }
 }
 

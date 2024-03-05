@@ -8,7 +8,7 @@
       <entry key="core.ui">
         <State />
       </entry>
-      <entry key="컨트리뷰터_리스트가_주어지면_화면에_노출한다()">
+      <entry key="로딩_상태일때는_리스트가_노출되지_않는다()">
         <State />
       </entry>
     </value>
