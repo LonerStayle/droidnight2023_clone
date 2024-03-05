@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name=".LonerApp"
-        android:theme="@style/Theme.CloneDroidNight2023"
+        android:theme="@style/Theme.Loner"
         tools:targetApi="31">
     </application>
 
