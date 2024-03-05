@@ -8,6 +8,7 @@ android {
 
 dependencies {
 
-    implementation(libs.oss.licenses)
     implementation(libs.androidx.appcompat)
+
+    implementation(libs.oss.licenses)
 }

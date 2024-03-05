@@ -101,7 +101,7 @@ class SessionDetailViewModelTest {
 
         val flow = MutableStateFlow(emptySet<String>())
         coEvery { getBookmarkedSessionIdListUseCase() } returns flow
-        coEvery { bookmarkSessionUseCase(sessionId,true) }  answers {
+        coEvery { bookmarkSessionUseCase(sessionId,true) } answers {
             flow.update { it + sessionId }
         }
 
