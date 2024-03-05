@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.core.view.WindowCompat
@@ -14,7 +15,7 @@ import kr.loner.core.designsystem.theme.LonerTheme
 import kr.loner.widget.LonerWidget.Companion.KEY_SESSION_ID
 
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by viewModels()
     private val sessionIdFromWidget: MutableStateFlow<String?> = MutableStateFlow(null)
 
