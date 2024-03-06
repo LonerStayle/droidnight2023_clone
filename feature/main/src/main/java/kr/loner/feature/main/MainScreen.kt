@@ -137,7 +137,7 @@ private fun MainBottomBar(
         Row(
             modifier = Modifier
                 .navigationBarsPadding()
-                .padding(start = 8.dp, end = 8.dp, bottom = 28.dp)
+                .padding(start = 8.dp, end = 8.dp, bottom = 0.dp)
                 .fillMaxWidth()
                 .height(56.dp)
                 .border(

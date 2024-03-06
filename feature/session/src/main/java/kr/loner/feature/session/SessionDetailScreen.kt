@@ -129,6 +129,7 @@ private fun SessionDetailContent(uiState: SessionDetailUiState) {
     when (uiState) {
         is SessionDetailUiState.Loading -> SessionDetailLoading()
         is SessionDetailUiState.Success -> SessionDetailContent(uiState.session)
+        else -> {}
     }
 }
 

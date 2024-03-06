@@ -54,7 +54,6 @@ fun SessionScreen(
             sessionState = sessionState,
             onBackClick = onBackClick
         )
-
         SessionContent(
             sessionState = sessionState,
             modifier = Modifier
