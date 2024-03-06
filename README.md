@@ -14,11 +14,11 @@
 - Test Library (Compose Test, JUnit4, Mocck, Kotest)
   
 
-### 소개
-안드로이드 최대 국내 컨퍼런스 DroidKnights 2023 App 의 Resource 를 그대로 활용 하여
+## 소개
+안드로이드 최대 국내 컨퍼런스 DroidKnights 2023 App 의 Resource 를 그대로 활용 하여   
 손 코딩을 통해 프로젝트를 해석할겸 클론을 진행한 프로젝트 입니다. 
 
-#### 기억에 남는점 
+## 기억에 남는점 
 1. gradle::build-logic 에서 task 를 관리하는 plugin 을 커스텀 제작을 통해 다양한 모듈의 보일러 플레이트 코드를 모두 제거하였음  (Version Catalog 활용)
 2. Data Layer:: Retrofit2 + Kotlin Serialization 활용, Repository 패턴, 외부 레이어에 데이터가 노출 될때 mapper 를 통해 공통 모델로 변환
 3. Data Layer:: Test 는 api 와 dataSource 의 테스트용 가짜 구현 클래스를 만들어 두고 Repository 에 파라미터로 넘겨서 레포지토리의 비즈니스 로직을 테스트함, kotest가 사용 되었는데 시나리오가 필요한경우 BehaviorSpec() 로 진행하였고, 단발성 테스트는 StringSpec() 로 확인하였음
