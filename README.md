@@ -35,3 +35,4 @@
 14. Ui Layer:: feature::session 모듈의 SessionState는 순수 UI로직만 다루는 state을 따로 다룬다.      
 15. model 모듈:: 모든 레이어에 공통으로 쓰는 Application Model 을 정의 한다.
 16. app 모듈:: app 의 permission , app resource 등등.. 앱의 configuration 을 관리 한다.
+    
