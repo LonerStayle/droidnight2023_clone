@@ -26,13 +26,9 @@ android {
 }
 
 dependencies {
-
-
     implementation(projects.feature.main)
 
     implementation(projects.core.designsystem)
     implementation(projects.core.navigation)
     implementation(projects.widget)
-
-
 }
